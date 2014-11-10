@@ -1,8 +1,5 @@
 source 'https://rubygems.org'
 
-#ruby=ruby-2.0.0
-ruby '2.0.0'
-#ruby-gemset=whatisdevops
+ruby '2.1.4'
 
-gem 'rack'
-gem 'thin'
+gem 'github-pages'
