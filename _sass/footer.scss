@@ -1,0 +1,35 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: $footer-height;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  text-align: center;
+
+  margin-top: $padding-large-vertical;
+  background: transparent;
+  color: white;
+  height: $footer-height;
+
+  padding: $padding-large-vertical $padding-large-horizontal;
+
+  ul {
+    @extend .list-inline;
+  }
+
+  a {
+    color: $brand-primary;
+  }
+
+  a:hover {
+    text-shadow: 0 0 2px black;
+  }
+}
