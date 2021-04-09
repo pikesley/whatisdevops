@@ -1,4 +1,57 @@
----
----
+<!DOCTYPE HTML>
+<html>
 
-<h1>DevOps is like violence - if it's not working, you're not using enough of it</h1>
+    <head>
+        <style>
+            @charset "UTF-8";
+            @import url("https://fonts.googleapis.com/css2?family=Special+Elite");
+
+            h1 {
+                font-family: "Special Elite";
+                text-shadow: 1px 1px 8px black;
+                font-size: 4em;
+            }
+
+            body {
+                display: grid;
+                align-items: center;
+                grid-template-columns: 1fr 4fr 1fr;
+                background-color: rgb(17, 139, 130);
+                color: rgb(252, 91, 9);
+                height: 100vh;
+            }
+
+            header {
+                text-align: center;
+                grid-column: 2 / 2;
+            }
+        </style>
+        <title>What is DevOps?</title>
+    </head>
+
+    <body>
+        <header>
+            <h1 id="header"></h1>
+        </header>
+    </body>
+
+    <script>
+        let text = "DevOps is like violence - if it's not working, you're not using enough of it"
+        let leadingSpaces = 8
+        let speed = 200
+        let i = 0
+
+        let fullText = `${" ".repeat(leadingSpaces)}${text}`
+
+        function typeWriter() {
+            if (i < fullText.length) {
+                document.getElementById("header").innerHTML += fullText.charAt(i)
+                i++
+                setTimeout(typeWriter, Math.random() * speed)
+            }
+        }
+
+        typeWriter()
+    </script>
+
+</html>
