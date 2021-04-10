@@ -2,6 +2,10 @@
 <html>
 
     <head>
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake-default.min.css"
+              integrity="sha512-RFfaqeB13DHSAfEoFBrsD1+mwvjX6WbHDqCmV5O5BauQzU722u/7wdStaQeI8zO1p+Hm85g/LYxal4T4htX/+Q=="
+              crossorigin="anonymous" />
         <style>
             @charset "UTF-8";
             @import url("https://fonts.googleapis.com/css2?family=Special+Elite");
@@ -14,8 +18,8 @@
 
             body {
                 display: grid;
-                align-items: center;
                 grid-template-columns: 1fr 4fr 1fr;
+                grid-template-rows: 1fr 4fr;
                 background-color: rgb(17, 139, 130);
                 color: rgb(252, 91, 9);
                 height: 100vh;
@@ -24,6 +28,7 @@
             header {
                 text-align: center;
                 grid-column: 2 / 2;
+                grid-row: 2 / 2;
             }
         </style>
         <title>What is DevOps?</title>
@@ -31,7 +36,7 @@
 
     <body>
         <header>
-            <h1 id="header"></h1>
+            <h1 class="shake"></h1>
         </header>
     </body>
 
@@ -45,7 +50,7 @@
 
         function typeWriter() {
             if (i < fullText.length) {
-                document.getElementById("header").innerHTML += fullText.charAt(i)
+                document.getElementsByTagName("h1")[0].innerHTML += fullText.charAt(i)
                 i++
                 setTimeout(typeWriter, Math.random() * speed)
             }
