@@ -19,7 +19,7 @@
             body {
                 display: grid;
                 grid-template-columns: 1fr 4fr 1fr;
-                grid-template-rows: 1fr 4fr;
+                grid-template-rows: 1fr 4fr 0.5fr;
                 background-color: rgb(17, 139, 130);
                 color: rgb(252, 91, 9);
                 height: 100vh;
@@ -30,6 +30,13 @@
                 grid-column: 2 / 2;
                 grid-row: 2 / 2;
             }
+
+
+            footer {
+                text-align: center;
+                grid-column: 2 / 2;
+                grid-row: 3 / 3;
+            }
         </style>
         <title>What is DevOps?</title>
     </head>
@@ -38,6 +45,11 @@
         <header>
             <h1 class="shake"></h1>
         </header>
+        <footer>
+            <a href="//github.com/pikesley/whatisdevops">
+                <img src="github.png">
+            </a>
+        </footer>
     </body>
 
     <script>
